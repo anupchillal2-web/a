@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Attendance System - Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Popup Modal -->
+    <div id="popupModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3 id="popupTitle"></h3>
+            <p id="popupMessage"></p>
+            <button id="popupButton" class="popup-btn">OK</button>
+        </div>
+    </div>
+
+    <!-- Login Screen -->
+    <div id="loginScreen" class="screen active">
+        <div class="login-container">
+            <h1>📚 Smart Attendance System</h1>
+            <h3>Punjab Higher Education Initiative</h3>
+            <div class="login-form">
+                <input type="text" id="userId" placeholder="Enter User ID">
+                <input type="password" id="password" placeholder="Enter Password">
+                <select id="userRole">
+                    <option value="student">Student</option>
+                    <option value="teacher">Teacher</option>
+                </select>
+                <button onclick="login()">Login</button>
+                <div class="form-links">
+                    <a href="#" onclick="showForgotPassword()">Forgot Password?</a>
+                    <a href="#" onclick="showRegister()">Not registered? Register here</a>
+                </div>
+                <p class="hint">Demo: Use any ID/password to login</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Register Screen -->
+    <div id="registerScreen" class="screen">
+        <div class="register-container">
+            <h1>📝 Registration</h1>
+            <h3>Create New Account</h3>
+            <div class="register-form">
+                <input type="text" id="regUserId" placeholder="Enter User ID" required>
+                <input type="password" id="regPassword" placeholder="Enter Password" required>
+                <input type="password" id="regConfirmPassword" placeholder="Confirm Password" required>
+                <input type="text" id="regFullName" placeholder="Full Name" required>
+                <input type="email" id="regEmail" placeholder="Email Address" required>
+                <input type="tel" id="regPhone" placeholder="Phone Number" required>
+                <select id="regUserRole" required>
+                    <option value="">Select Role</option>
+                    <option value="student">Student</option>
+                    <option value="teacher">Teacher</option>
+                </select>
+                <input type="text" id="regDepartment" placeholder="Department/Class" required>
+                <button onclick="register()">Register</button>
+                <div class="form-links">
+                    <a href="#" onclick="showLogin()">Already have an account? Login here</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Forgot Password Screen -->
+    <div id="forgotPasswordScreen" class="screen">
+        <div class="forgot-container">
+            <h1>🔒 Forgot Password</h1>
+            <h3>Reset Your Password</h3>
+            <div class="forgot-form">
+                <input type="text" id="forgotUserId" placeholder="Enter User ID" required>
+                <input type="email" id="forgotEmail" placeholder="Enter Email Address" required>
+                <button onclick="resetPassword()">Reset Password</button>
+                <div class="form-links">
+                    <a href="#" onclick="showLogin()">Back to Login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
